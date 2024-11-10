@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      font-family: DM sans;
+    }
+
+    body {
+      background-color: rgb(245, 245, 245);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 375px;
+      margin: 2rem;
+      gap: 20px;
+    }
+
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+      main {
+          grid-template-columns: repeat(2, 1fr);
+          max-width: 700px;
+      }
+    }
+
+    @media (min-width: 901px) {
+      main {
+          grid-template-columns: repeat(4, 1fr);
+          max-width: 1100px;
+          grid-template-rows: 1fr 230px 230px;
+      }
+    }
+
+    section {
+      border-radius: 10px;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      main .first-section {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        max-width: 700px;
+      }
+    }
+
+    @media (min-width: 901px) {
+      main .first-section {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        max-width: 100%;
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+    }
+
+    .first-section {
+      display: flex;
+      flex-direction: column;
+      background-color:  hsl(256, 67%, 59%);
+      align-items: center;
+      text-align: center;
+      max-width: 360px;
+      padding: 20px;
+    }
+
+    h1 {
+      color: white;
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 50px;
+    }
+
+    .first-section img {
+      max-width: 180px;
+      margin-top: 10px;
+    }
+
+    .first-section p {
+      color: hsla(0, 0%, 100%, 0.774);
+      margin-top: 5px;
+    }
+
+    .second-section {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      align-items: center;
+      max-width: 360px;
+      padding: 20px;
+      
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      main .second-section {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+      }
+    }
+
+    @media (min-width: 901px) {
+      main .second-section {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        max-width: 100%;
+      }
+
+      main .second-section h2 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+
+    
+
+    .second-section img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .second-section h2 {
+      font-weight: 500;
+      width: 100%;
+    }
+
+    .third-section {
+      display: flex;
+      flex-direction: column;
+      background-color: hsl(39, 100%, 71%);
+      align-items: center;
+      max-width: 360px;
+      max-height: 250px;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      main .third-section {
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        max-width: 700px;
+        max-height: 350px;
+        font-size: 25px;
+        align-items: start;
+      }
+
+      main .third-section img {
+        max-width: 270px ;
+        margin-top: 40px;
+        align-self: center;
+        max-width: 100%;
+      }
+      main .third-section h2 {
+        max-width: 100%;
+        line-height: 40px;
+      }
+    }
+
+    @media (min-width: 901px) {
+      main .third-section {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        max-width: 100%;
+      }
+
+      main .third-section img {
+        width: 100%;
+        margin-top: 8px;
+      }
+
+      main .third-section h2 {
+        font-size: 30px;
+        line-height: 27px;
+      }
+    }
+
+    .third-section img {
+      max-width: 300px;
+      margin-top: 20px;
+    }
+
+    .third-section h2 {
+      font-weight: 500;
+    }
+
+    .fourth-section {
+      display: flex;
+      flex-direction: column;
+      background-color:  hsl(254, 88%, 90%);
+      max-width: 360px;
+      padding: 20px;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      main .fourth-section {
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        max-width: 700px;
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      .fourth-section img {
+        margin-bottom: 40px !important; 
+        margin-top: 40px !important; 
+      }
+    }
+
+    @media (min-width: 901px) {
+      main .fourth-section {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        max-width: 100%;
+        overflow: hidden;
+        padding-left: 30px;
+        padding-top: 30px;
+      }
+
+      main .fourth-section img {
+        width: 180%;
+      }
+
+      main .fourth-section h2 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+
+      main .fourth-section p {
+        margin-top: 10px;
+      }
+    }
+
+    .fourth-section img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .fourth-section h2 {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .fourth-section p {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .fifth-section {
+      display: flex;
+      flex-direction: column;
+      background-color: hsl(256, 67%, 59%);
+      align-items: center;
+      max-width: 360px;
+      padding: 20px;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      main .fifth-section {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        max-width: 700px;
+        max-height: 350px;
+        font-size: 25px;
+      }
+
+      main .fifth-section h2 {
+        margin-top: 10px;
+        max-width: 100%;
+      }
+
+      main .fifth-section img {
+        width: 100%;
+       
+      }
+    }
+
+    @media (min-width: 901px) {
+      main .fifth-section {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      main .fifth-section img {
+        width: 40%;
+      }
+
+      main .fifth-section h2 {
+        margin: 0;
+        text-align: start;
+        font-size: 35px;
+        line-height: 40px;
+      }
+    }
+
+    .fifth-section img {
+      max-width: 270px;
+    }
+
+    .fifth-section h2 {
+      text-align: center;
+      color: white;
+      margin-top: 50px;
+      max-width: 250px;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+
+    .sixth-section {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      max-width: 360px;
+      padding: 20px;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      main .sixth-section {
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        
+      }
+
+      main .sixth-section img {
+        max-width: 70%;
+      }
+    }
+
+    @media (min-width: 901px) {
+      main .sixth-section {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        max-width: 100%;
+      }
+    }
+
+    .sixth-section h2 {
+      font-size: 50px;
+      font-weight: 500;
+    }
+
+    .sixth-section p {
+      font-size: 20px;
+    }
+
+    .sixth-section img {
+      max-width: 180px;
+      margin-top: 20px;
+    }
+
+    .last-cart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 375px;
+      width: 100%;
+      gap: 20px;
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+      main .last-cart {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        max-width: 700px;
+      }
+    }
+
+    @media (min-width: 901px) {
+      main .last-cart {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        max-width: 100%;
+        max-height: 7000px;
+        
+      }
+
+      .last-cart .eight-section {
+        height: 100%;
+        padding: 15px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 50px;
+      }
+
+      .last-cart .eight-section h2 {
+        font-size: 40px;
+        max-width: 200px;
+        line-height: 35px;
+      }
+
+      .last-cart .eight-section img {
+        max-width: 100%;
+      }
+
+      .last-cart .seventh-section {
+        height: 100%;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 20px;
+      }
+
+      .last-cart .seventh-section h2 {
+        line-height: 30px;
+      }
+      
+    }
+
+    
+
+    .seventh-section {
+      display: flex;
+      flex-direction: column;
+      background-color: hsl(31, 66%, 93%);
+      width: 85%;
+      padding: 30px;
+    }
+
+    .seventh-section img {
+      max-width: 180px;
+      margin-top: 20px;
+    }
+
+    .seventh-section h2 {
+      font-weight: 500;
+      line-height: 23px;
+      max-width: 300px;
+    }
+
+    .eight-section {
+      display: flex;
+      flex-direction: column;
+      background-color: hsl(39, 100%, 71%);
+      width: 90%;
+      padding: 20px;
+    }
+
+    .eight-section h2 {
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 30px;
+      max-width: 280px;
+    }
+
+    .eight-section img {
+      max-width: 180px;
+      margin-top: 35px;
+    }
+    
+  </style>
+</head>
+<body>
+  <main>
+    <section class="first-section">
+      <h1>
+        Social Media <span style="color: hsl(39, 100%, 71%)">10x</span> <span style="font-style: italic;">Faster</span> with AI
+      </h1>
+      <img src="bento-grid-main\assets\images\illustration-five-stars.webp">
+      <p>
+        Over 4,000 5-star reviews
+      </p>
+    </section>
+    <section class="second-section">
+      <img src="bento-grid-main\assets\images\illustration-multiple-platforms.webp">
+      <h2>
+        Manage multiple accounts and platforms.
+      </h2>
+    </section>
+    <section class="third-section">
+      <h2>
+        Maintain a consistent posting schedule.
+      </h2>
+      <img src="bento-grid-main\assets\images\illustration-consistent-schedule.webp">
+    </section>
+    <section class="fourth-section">
+      <h2>Schedule to social media.</h2>
+      <img src="bento-grid-main\assets\images\illustration-schedule-posts.webp">
+      <p>Optimize post timings to publish content at the perfect time for your audience.</p>
+    </section>
+    <section class="fifth-section">
+      <img src="bento-grid-main\assets\images\illustration-grow-followers.webp">
+      <h2>Grow followers with non-stop content.</h2>
+    </section>
+    <section class="sixth-section">
+      <h2>>56%</h2>
+      <p>faster audience growth</p>
+      <img src="bento-grid-main\assets\images\illustration-audience-growth.webp">
+    </section>
+    <div class="last-cart">
+      <section class="seventh-section">
+        <h2>Create and schedule content <span style="color: hsl(256, 67%, 59%); font-style: italic;">quicker.</span></h2>
+        <img src="bento-grid-main\assets\images\illustration-create-post.webp">
+      </section>
+      <section class="eight-section">
+        <h2>Write your content using AI.</h2>
+        <img src="bento-grid-main\assets\images\illustration-ai-content.webp">
+      </section>
+    </div>
+  </main>
+  <div>Challenge by <a href="https://www.frontendmentor.io/home">Frontend Mentor.</a> Coded by. <a href="">Mohamed</a></div>
+</body>
+</html>
